@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+<h:head>
+	<title>TESTE TESTE</title>
+	<h:outputStylesheet name="product.css" library="css" />
+</h:head>
+<h:body>
+
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="100" header="Top"
+			resizable="true" closable="true" collapsible="true">
+			<h:outputText value="Top unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="50" collapsible="true">
+			<h:outputText value="South unit content." />
+		</p:layoutUnit>
+
+
+		<p:layoutUnit position="west" size="200" header="Menu"
+			resizable="true" closable="true" collapsible="true">
+			<h:form id="menu">
+				<p:accordionPanel activeIndex="-1" styleClass="accordionProducts" value="#{categoryBean.categories}" id="acc" var="fatherCategory">
+					<p:tab title="#{fatherCategory.description}"  >
+						<h:panelGroup layout="block" id="menu_#{fatherCategory.categoryId}">
+							<ui:repeat value="#{fatherCategory.childrens}" id="dataT" 
+								var="child">
+									<p:commandLink>#{child.description}</p:commandLink><br />
+							</ui:repeat>
+						</h:panelGroup>
+					</p:tab>
+				</p:accordionPanel>
+			</h:form>
+
+
+		</p:layoutUnit>
+
+		<p:layoutUnit id="hall" position="center">
+		
+			<p:layout style="height:100%;width:100%">  
+			    <p:layoutUnit position="center" resizable="true">  
+			        Left  
+			    </p:layoutUnit>  
+			  
+			    <p:layoutUnit position="south" size="200" resizable="true" collapsible="true" header="" >  
+					 <p:tabView id="tabView" dynamic="true" effect="fade" cache="true" styleClass="tabView" style="font-size:10px;">
+				
+				        <p:tab id="description" title="Descrição" titleStyle="aqui" >
+				         
+				        </p:tab>
+				
+				        <p:tab id="feature" title="Características">
+				           
+				            
+				        </p:tab>
+			
+			   		 </p:tabView>
+			    </p:layoutUnit>  
+			    
+			</p:layout> 
+
+		</p:layoutUnit>
+
+	</p:layout>
+
+</h:body>
+</html>

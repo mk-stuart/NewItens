@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+<h:head></h:head>
+<h:body>
+<h:form id="form">  
+                              
+    <h:panelGrid columns="4" cellpadding="5">  
+    
+        <h:outputLabel for="name" value="Name:" style="font-weight:bold"/>            
+        <p:inputText id="name" value="#{userBean.user.firstName}" />  
+        <h:outputText value="#{userBean.user.firstName}" />
+		<br/>
+        <h:outputLabel for="lastName" value="lastName:" style="font-weight:bold"/>            
+        <p:inputText id="lastName" value="#{userBean.user.lastName}" />  
+        <h:outputText value="#{userBean.user.lastName}" />
+        <br/>
+        <h:outputLabel for="cpf" value="cpf" style="font-weight:bold"/>    
+        <p:inputText id="cpf" value="#{userBean.user.cpf}" />  
+        <h:outputText value="#{userBean.user.cpf}" />
+        <br/>
+        <h:outputLabel for="email" value="email" style="font-weight:bold"/>  
+        <p:inputText id="email" value="#{userBean.user.email}" />  
+        <h:outputText value="#{userBean.user.email}" />
+		<br/>
+        <h:outputLabel for="password" value="password" style="font-weight:bold"/>  
+        <p:inputText id="password" value="#{userBean.user.password}" />  
+        <h:outputText value="#{userBean.user.password}" />
+		<br/>
+        <h:outputLabel for="phoneNumber" value="phoneNumber" style="font-weight:bold"/>  
+        <p:inputText id="phoneNumber" value="#{userBean.user.phoneNumber}" />  
+        <h:outputText value="#{userBean.user.phoneNumber}" />
+        <br/>
+        <h:outputLabel for="celPhoneNumber" value="celPhoneNumber" style="font-weight:bold"/>  
+        <p:inputText id="celPhoneNumber" value="#{userBean.user.celPhoneNumber}" />  
+        <h:outputText value="#{userBean.user.celPhoneNumber}" />
+        <br/>
+        <h:outputLabel for="birthDate" value="birthDate" style="font-weight:bold"/>  
+        <p:inputText id="birthDate" value="#{userBean.user.birthDate}" />  
+        <h:outputText value="#{userBean.user.birthDate}" />
+		<br/><br/>
+        <p:commandButton value="Cadastrar" update=":form" action="#{userBean.insertUser}" />  
+  		<br/>
+  		<br/>
+  		<br/>
+  		<h:outputText value="#{userBean.message}" />
+  		
+    </h:panelGrid>  
+      
+</h:form>
+</h:body>
+</html>

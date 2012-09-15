@@ -1,0 +1,62 @@
+@CHARSET "ISO-8859-1";
+html {
+	width: 100%;
+	height: 100%;
+	}
+#tabProduct > .formProduct > .tabProducts {
+	
+	float: left;
+	width: 50%;
+	height: 40em;
+	
+}
+
+#tabsLogo > .form > .tabView{
+	float: right;
+	margin: 1px;
+	height: 25em;
+	width: 45%;
+	
+	display: block;
+	font-size: 10px;
+	
+}
+#tabsLogo > .form > .tabView > .aqui {
+	
+	width: 40px;
+	border: dotted;
+	
+}
+
+.fieldSet {
+	
+	float: right;
+	width: 42.6%;
+	display: block;
+		
+}
+.fieldSetProduct {
+	
+	float: none;
+	width: 50%;
+	display: block;
+	height: auto;
+		
+}	
+.tabsProduct {
+	/*margin-left: 20%;*/
+	/*padding-left: 20%;*/
+	position: fixed;
+	left: 21%;
+}
+#navigation .ui-accordion-content {
+display: block;
+}
+
+#navigation .ui-helper-hidden {
+display: none;
+}
+
+.ui-accordion{
+	font-size: 10px !important
+}

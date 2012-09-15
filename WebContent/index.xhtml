@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+	
+	<h:head></h:head>
+	<h:body>
+
+<h:form>  
+  
+    <p:growl id="messages"/>  
+  
+    <p:splitButton value="Chooooooose" icon="ui-icon-shuffle">  
+        <p:menuitem value="Login" url="login.jsf" icon="ui-icon-person"/>  
+        <p:menuitem value="Registre-se" url="user_register.jsf" icon="ui-icon-plus"/>  
+        <p:separator />
+        <p:menuitem value="Hall" url="hall_products.jsf" icon="ui-icon-grip-diagonal-se"/>
+         <p:menuitem value="teste" url="bbbb.jsf" icon="ui-icon-grip-diagonal-se"/>
+    </p:splitButton>  
+  
+</h:form> 
+
+
+<br/><br/>
+		<ui:repeat value="#{userBean.users}" var="user" >
+             <li>
+                 <h:outputText value="#{user.firstName} " />
+                 <h:outputText value="#{user.lastName}"/>
+    			<br />
+             </li>
+         </ui:repeat>
+         <br/><br/>        
+
+	</h:body>
+</html>

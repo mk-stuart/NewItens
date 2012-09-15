@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+		<p:messages></p:messages>
+		<h:form id="form">
+			<h:outputLabel for="login" value="Email: " style="font-weight:bold"/>            
+	        <p:inputText id="login" value="#{userBean.user.email}" />  
+	        <h:outputText value="#{userBean.user.firstName}" />
+	        <br/>
+	        <h:outputLabel for="password" value="Senha: " style="font-weight:bold"/>            
+	        <p:inputText id="password" value="#{userBean.user.password}" />  
+	        <h:outputText value="#{userBean.user.email}" />
+			<br/>
+			<p:commandButton value="Logar" update=":form" action="#{userBean.startSession}" />  
+  		
+		</h:form>
+
+</h:body>
+</html>
