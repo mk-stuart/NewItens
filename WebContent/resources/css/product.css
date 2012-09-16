@@ -60,3 +60,57 @@ display: none;
 .ui-accordion{
 	font-size: 10px !important
 }
+.ui-inputfield {
+	padding: 2px !important	;
+}
+
+<!-- Teste Top Login -->
+
+#topTop {
+	position: absolute;
+	width: 300px;
+	left: 0px;
+	z-index: 25;
+
+	background-color:black;
+}
+
+#loginTop {
+	width: 300px;
+	position: relative;
+	top: 1px;
+	height: 0px;
+	left:25%;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 10;
+	overflow: hidden;
+	text-align: left;
+	background-color:orange;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	/*padding-left:65%;*/
+}
+
+.panel_button {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 1px;
+	width: 173px;
+	height: 54px;
+	left:25%;
+	/*padding-left:65%;*/
+	z-index: 20;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.70;
+	-khtml-opacity: 0.70;
+	opacity: 0.70;
+	cursor: pointer;
+	text-align: center;
+}
+.panel_button img {
+	position: relative;
+	top: 10px;
+	border: none;
+}

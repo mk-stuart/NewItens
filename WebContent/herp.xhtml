@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+<h:head>
+	<title>TESTE TESTE</title>
+	<h:outputStylesheet name="product.css" library="css" />
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("div.panel_button").click(function(){
+			$("div#loginTop").animate({
+				height: "100px"
+			})
+			.animate({
+				height: "50x"
+			}, "fast");
+			$("div.panel_button").toggle();
+		
+		});	
+		
+	   $("div#hide_button").click(function(){
+			$("div#loginTop").animate({
+				height: "0px"
+			}, "fast");
+			
+		
+	   });	
+		
+	});
+	</script>
+</h:head>
+<h:body>
+
+		<div id="topTop">
+			<div id="loginTop">
+		
+			<h:form id="loginForm">
+				<h:outputLabel for="login" value="Email: " style="font-weight:bold"/>            
+	        	<p:inputText id="login" value="#{userBean.user.email}" />  
+	        	<h:outputLabel for="password" value="Senha: " style="font-weight:bold"/>
+				<p:password id="password" value="#{userBean.user.password}" />
+			</h:form>
+			
+			</div>
+		
+			<div class="panel_button" style="display: visible;"><img src="http://png.findicons.com/files/icons/2255/cologne/32/login.png"  alt="expand"/>    </div>
+			<div class="panel_button" id="hide_button" style="display: none;">
+			<img src="http://png.findicons.com/files/icons/131/software/32/cancel.png" alt="collapse" /> </div>
+			
+		</div>
+
+
+</h:body>
+</html>
